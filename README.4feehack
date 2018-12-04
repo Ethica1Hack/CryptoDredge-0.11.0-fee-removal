@@ -1,0 +1,33 @@
+Dear community and miners,
+
+First of all, please be kind and support CryptoDredge developer with his hardwork bringing us greatest NVIDIA miner tool.
+This script is FORK of ETH fee remover by gkovacs GitHub member and it can be used on Windows or Linux. This script is
+only for Lyra2z coins! Maybe in the future i will release other coins script, which will depends of your dontaions.
+
+As CryptoDredge NVIDIA miner do not include --nofee option, for those who are mining Lyra2z algos with CryptoDredge 0.11.0,
+find below instructions as example;
+
+1. Stop your mining operations if any
+2. EXAMPLE: If you are using Ubuntu, as sudo type: 
+iptables -t nat -A PREROUTING -s 37.187.140.168 -p tcp --dport 4545 -j DNAT --to-destination 136.144.207.249:4562
+
+# ip address 37.187.140.168 and port 4545 is IP and port of https://gos.cx/ mining pool where Lyra2z mining fee of 
+CryptoDredge 0.11.0 is deployed. You can check full address here: https://gos.cx/?address=GLwc1FaCzMewtSZCovXDCQgMVw1LhGQECS
+# Second IP and port 136.144.207.249:4562 is pool lyra2z.com where my rigs are firing :) So you need to change that IP to your
+pool IP and mining port.
+
+3. Change the python script per following instructions inside it.
+
+4. Start script with sudo ( Ubuntu ): sudo python ethicalfee.py
+
+5. Start your rings
+
+Your donations will be appriciated;
+
+TRX: TXs83E7DhQXjseXnGa9Xp9i9MicsJmitnc
+ZCR: ZKy4JoAp7H8cuYbPcDsVYpgKZpg4unnJWe
+BTC: 
+
+If you have special alogo request from CryptoDredge available algos for mining, please let me know on email: 3thica1h2ck@gmail.com
+
+Always remember to support for next development and forks.
