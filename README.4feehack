@@ -16,7 +16,7 @@ CryptoDredge 0.11.0 is deployed. You can check full address here: https://gos.cx
 # Second IP and port 136.144.207.249:4562 is pool lyra2z.com where my rigs are firing :) So you need to change that IP to your
 pool IP and mining port.
 
-3. Install libs for python 2.7: scapy and nfqueue
+3. Install libs for python 2.7: scapy and nfqueue ( pip install scapy and pip install nfqueue ) - google it if you do not have knowladge
 
 3. Change the python script per following instructions inside it.
 
