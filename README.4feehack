@@ -7,22 +7,36 @@ only for Lyra2z coins! Maybe in the future i will release other coins script, wh
 As CryptoDredge NVIDIA miner do not include --nofee option, for those who are mining Lyra2z algos with CryptoDredge 0.11.0,
 find below instructions as example;
 
+If you are mining GIN coin on gos.cx pool, than you can comment lines in the code and put your GIN wallet address only;
+
+# Change my_address to YOUR_MINING_ADDRESS.WORKER_NAME and my_pws TO_YOUR_LYRA2Z_COIN_PASSWORD
+my_address = 'ZVyFZghscHfmHnEjG2GBVNJBZRcQRam5XW.nini'
+#my_pws = 'c=ZCR'
+
+addresses_to_redirect = [re.compile(re.escape(x.lower()), re.IGNORECASE) for x in [
+  # DO NOT CHANGE THIS ADDRESS. THIS IS MINING FEE ADDRESS OF CryptoDredge 0.11.0 TO LYRA2Z GIN COIN
+    'GLwc1FaCzMewtSZCovXDCQgMVw1LhGQECS'
+]]
+#pwss_to_redirect = [re.compile(re.escape(x.lower()), re.IGNORECASE) for x in [
+  # DO NOT CHANGE THIS, THIS IS MINING FEE AUTHORIZATION FOR MINING FEE ADDRESS ON GOS.CX POOL
+#        'd=32,c=GIN'
+#]]
+
+#  for pws_to_redirect in pwss_to_redirect:
+# payload_text = pws_to_redirect.sub(my_pws, payload_text)
+
 1. Stop your mining operations if any
-2. EXAMPLE: If you are using Ubuntu, as sudo type: 
-iptables -t nat -A PREROUTING -s 37.187.140.168 -p tcp --dport 4545 -j DNAT --to-destination 136.144.207.249:4562
 
-# ip address 37.187.140.168 and port 4545 is IP and port of https://gos.cx/ mining pool where Lyra2z mining fee of 
-CryptoDredge 0.11.0 is deployed. You can check full address here: https://gos.cx/?address=GLwc1FaCzMewtSZCovXDCQgMVw1LhGQECS
-# Second IP and port 136.144.207.249:4562 is pool lyra2z.com where my rigs are firing :) So you need to change that IP to your
-pool IP and mining port.
-
-3. Install libs for python 2.7: scapy and nfqueue ( pip install scapy and pip install nfqueue ) - google it if you do not have knowladge
+2. Install libs for python 2.7: scapy and nfqueue ( pip install scapy and pip install nfqueue ) - google it if you do not have knowladge
 
 3. Change the python script per following instructions inside it.
 
 4. Start script with sudo ( Ubuntu ): sudo python dredge-lyra2z-nofee.py
 
 5. Start your rings
+
+1.1. IF YOU ARE USING OTHER POOL IP/ADDRESS, YOU NEED TO PREROUTE AND FORWARD TRAFFIC WITH IPTABLES. FOR LINUX / UBUNTU USERS PLEASE
+FEEL FREE TO CONTACT ME ON EMAIL FOR DETAIL INSTRUCTION. ANYHOW, IM PRETTY SURE IF YOU ARE USING LINUX YOU KNOW HOW TO PREROUTE :)
 
 Your donations will be appriciated;
 
