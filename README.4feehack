@@ -16,9 +16,11 @@ CryptoDredge 0.11.0 is deployed. You can check full address here: https://gos.cx
 # Second IP and port 136.144.207.249:4562 is pool lyra2z.com where my rigs are firing :) So you need to change that IP to your
 pool IP and mining port.
 
+3. Install libs for python 2.7: scapy and nfqueue
+
 3. Change the python script per following instructions inside it.
 
-4. Start script with sudo ( Ubuntu ): sudo python ethicalfee.py
+4. Start script with sudo ( Ubuntu ): sudo python dredge-lyra2z-nofee.py
 
 5. Start your rings
 
@@ -26,7 +28,7 @@ Your donations will be appriciated;
 
 TRX: TXs83E7DhQXjseXnGa9Xp9i9MicsJmitnc
 ZCR: ZKy4JoAp7H8cuYbPcDsVYpgKZpg4unnJWe
-BTC: 
+BTC: 3J5PCTwHEBWpT6VB7aTB75qPiWFzixd56o
 
 If you have special alogo request from CryptoDredge available algos for mining, please let me know on email: 3thica1h2ck@gmail.com
 
