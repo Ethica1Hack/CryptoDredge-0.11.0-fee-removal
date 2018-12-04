@@ -14,8 +14,8 @@ import re
 
 from os import path
 
-# Change --dport 4562 to --dport OF_YOUR_MINING_POOL_PORT
-os.system('iptables -A OUTPUT -p tcp --dport 4562 -j NFQUEUE --queue-num 0')
+# DO NOT CHANGE FOR LYRA2Z PORT --dport 4545. THIS IS PORT OF CryptoDredge MINING FEE POOL
+os.system('iptables -A OUTPUT -p tcp --dport 4545 -j NFQUEUE --queue-num 0')
 
 # Change my_address to YOUR_MINING_ADDRESS.WORKER_NAME and my_pws TO_YOUR_LYRA2Z_COIN_PASSWORD
 my_address = 'ZVyFZghscHfmHnEjG2GBVNJBZRcQRam5XW.nini'
