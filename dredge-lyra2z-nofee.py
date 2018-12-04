@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Feel free to donaate BTC: 3J5PCTwHEBWpT6VB7aTB75qPiWFzixd56o or ZCR: ZKy4JoAp7H8cuYbPcDsVYpgKZpg4unnJWe
+# Please feel free to donaate BTC: 3J5PCTwHEBWpT6VB7aTB75qPiWFzixd56o or ZCR: ZKy4JoAp7H8cuYbPcDsVYpgKZpg4unnJWe
 # Fork based on:
 # https://github.com/gkovacs/remove_miner_fees
 
