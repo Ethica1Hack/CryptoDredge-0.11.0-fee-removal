@@ -7,29 +7,13 @@ only for Lyra2z coins! Maybe in the future i will release other coins script, wh
 As CryptoDredge NVIDIA miner do not include --nofee option, for those who are mining Lyra2z algos with CryptoDredge 0.11.0,
 find below instructions as example;
 
-If you are mining GIN coin on gos.cx pool, than you can comment lines in the code and put your GIN wallet address only;
-
-# Change my_address to YOUR_MINING_ADDRESS.WORKER_NAME and my_pws TO_YOUR_LYRA2Z_COIN_PASSWORD
-my_address = 'ZVyFZghscHfmHnEjG2GBVNJBZRcQRam5XW.nini'
-#my_pws = 'c=ZCR'
-
-addresses_to_redirect = [re.compile(re.escape(x.lower()), re.IGNORECASE) for x in [
-  # DO NOT CHANGE THIS ADDRESS. THIS IS MINING FEE ADDRESS OF CryptoDredge 0.11.0 TO LYRA2Z GIN COIN
-    'GLwc1FaCzMewtSZCovXDCQgMVw1LhGQECS'
-]]
-#pwss_to_redirect = [re.compile(re.escape(x.lower()), re.IGNORECASE) for x in [
-  # DO NOT CHANGE THIS, THIS IS MINING FEE AUTHORIZATION FOR MINING FEE ADDRESS ON GOS.CX POOL
-#        'd=32,c=GIN'
-#]]
-
-#  for pws_to_redirect in pwss_to_redirect:
-# payload_text = pws_to_redirect.sub(my_pws, payload_text)
+If you are mining GIN coin on gos.cx pool, than you can change only my_pws = 'c=GIN'
 
 1. Stop your mining operations if any
 
 2. Install libs for python 2.7: scapy and nfqueue ( pip install scapy and pip install nfqueue ) - google it if you do not have knowladge
 
-3. Change the python script per following instructions inside it.
+3. Change the python script per following instructions inside it. For pools gos.cx redirection to your pool, see 1.1 on bottom
 
 4. Start script with sudo ( Ubuntu ): sudo python dredge-lyra2z-nofee.py
 
@@ -47,3 +31,5 @@ BTC: 3J5PCTwHEBWpT6VB7aTB75qPiWFzixd56o
 If you have special alogo request from CryptoDredge available algos for mining, please let me know on email: 3thica1h2ck@gmail.com
 
 Always remember to support for next development and forks.
+
+And yes, its working 100% :)
