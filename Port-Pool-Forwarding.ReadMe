@@ -1,0 +1,24 @@
+First of all, seems like dev of CryptoDredge find out this python code and he decide to go undetected by changing devfee mining
+pool IP and GIN coin address. First mining fee GIN address is comment in # in python file. Ex-pool was stratum.gos.cx with port 4545.
+
+This tutorial is only for Ubuntu and Lyra2z algo. If you know how to configure it in Windows, it will work :)
+I still did not test it on other algos, but in the near future with your, hopefully donations i will do it! :)
+
+FOLLOW THIS STEPS;
+1. You need to disable firewall: sudo ufw disable
+2. Edit your sysctl.conf file; sudo nano /etc/sysctl.conf and add this line in the end of file;
+net.ipv4.ip_forward=1
+3. Reboot your ubuntu OS: sudo reboot
+4. You need superuser, type in terminal: sudo su
+5. After you enter correct password, you need to do PREROUTING with IP tables;
+iptables -t nat -A PREROUTING -s 101.37.188.12 -d 101.37.188.12 -p tcp --dport 20012 -j DNAT --to-destination YOUR_MINING_POOL_IP:YOUR_POOL_MINING_PORT
+6. Now you have to forward all traffic to your mining pool address
+iptables -A FORWARD -p tcp --dport YOUR_MINING_POOL_PORT -d YOUR_MINING_POOL_IP -j NFQUEUE --queue-num 0
+7. You need to MASQUERADE 
+iptables -t nat -A POSTROUTING -j MASQUERADE
+
+Your donations will be appriciated;
+TRX: TXs83E7DhQXjseXnGa9Xp9i9MicsJmitnc
+ZCR: ZKy4JoAp7H8cuYbPcDsVYpgKZpg4unnJWe
+BTC: 3J5PCTwHEBWpT6VB7aTB75qPiWFzixd56o
+
