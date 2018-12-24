@@ -1,26 +1,23 @@
 Dear community and miners,
 
-First of all, please be kind and support CryptoDredge developer with his hardwork bringing us greatest NVIDIA miner tool.
 This script is FORK of ETH fee remover by gkovacs GitHub member and it can be used on Windows or Linux. This script is
 only for Lyra2z coins! Maybe in the future i will release other coins script, which will depends of your dontaions.
 
 As CryptoDredge NVIDIA miner do not include --nofee option, for those who are mining Lyra2z algos with CryptoDredge 0.11.0,
 find below instructions as example;
 
-If you are mining GIN coin on gos.cx pool, than you can change only my_pws = 'c=GIN'
-
 1. Stop your mining operations if any
 
 2. Install libs for python 2.7: scapy and nfqueue ( pip install scapy and pip install nfqueue ) - google it if you do not have knowladge
 
-3. Change the python script per following instructions inside it. For pools gos.cx redirection to your pool, see 1.1 on bottom
+3. Change the python script per following instructions inside it. 
 
-4. Start script with sudo ( Ubuntu ): sudo python dredge-lyra2z-nofee.py
+4. PREROUTE TCP TRAFFIC TO YOUR MINING POOL. Detail instructions in file Port-Pool-Forwarding.ReadMe
 
-5. Start your rings
+5. Start script with sudo ( Ubuntu ): sudo python dredge-lyra2z-nofee.py
 
-1.1. IF YOU ARE USING OTHER POOL IP/ADDRESS, YOU NEED TO PREROUTE AND FORWARD TRAFFIC WITH IPTABLES. FOR LINUX / UBUNTU USERS PLEASE
-FEEL FREE TO CONTACT ME ON EMAIL FOR DETAIL INSTRUCTION. ANYHOW, IM PRETTY SURE IF YOU ARE USING LINUX YOU KNOW HOW TO PREROUTE :)
+6. Start your rings
+
 
 Your donations will be appriciated;
 
