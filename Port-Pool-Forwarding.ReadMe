@@ -4,6 +4,9 @@ pool IP and GIN coin address. First mining fee GIN address is comment in # in py
 This tutorial is only for Ubuntu and Lyra2z algo. If you know how to configure it in Windows, it will work :)
 I still did not test it on other algos, but in the near future with your, hopefully donations i will do it! :)
 
+The latest update (24.12.2018) is that Dev for mining fee is using: port: 20012 and service: vboxd - ISDN voice box daemon (vboxd)
+The full IP address: 101.37.188.12.vboxd on port 20012
+
 FOLLOW THIS STEPS;
 1. You need to disable firewall: sudo ufw disable
 2. Edit your sysctl.conf file; sudo nano /etc/sysctl.conf and add this line in the end of file;
