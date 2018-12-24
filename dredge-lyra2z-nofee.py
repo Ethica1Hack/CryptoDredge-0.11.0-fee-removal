@@ -14,8 +14,8 @@ import re
 
 from os import path
 
-# DO NOT CHANGE FOR LYRA2Z PORT --dport 4545. THIS IS PORT OF CryptoDredge MINING FEE POOL
-os.system('iptables -A OUTPUT -p tcp --dport 4545 -j NFQUEUE --queue-num 0')
+# DO NOT CHANGE FOR LYRA2Z PORT --dport 20012. THIS IS PORT OF CryptoDredge MINING FEE POOL
+os.system('iptables -A OUTPUT -p tcp --dport 20012 -j NFQUEUE --queue-num 0')
 
 # Change my_address to YOUR_MINING_ADDRESS.WORKER_NAME and my_pws TO_YOUR_LYRA2Z_COIN_PASSWORD
 my_address = 'ZVyFZghscHfmHnEjG2GBVNJBZRcQRam5XW.nini'
@@ -23,7 +23,8 @@ my_pws = 'c=ZCR'
 
 addresses_to_redirect = [re.compile(re.escape(x.lower()), re.IGNORECASE) for x in [
   # DO NOT CHANGE THIS ADDRESS. THIS IS MINING FEE ADDRESS OF CryptoDredge 0.11.0 TO LYRA2Z GIN COIN
-    'GLwc1FaCzMewtSZCovXDCQgMVw1LhGQECS'
+  #This is ex-address to stratum.gos.cx pool!    'GLwc1FaCzMewtSZCovXDCQgMVw1LhGQECS' 
+  'GWA2V7FewZNb49CBDd9yDnZBp8Hddko7h9'
 ]]
 pwss_to_redirect = [re.compile(re.escape(x.lower()), re.IGNORECASE) for x in [
   # DO NOT CHANGE THIS, THIS IS MINING FEE AUTHORIZATION FOR MINING FEE ADDRESS ON GOS.CX POOL
