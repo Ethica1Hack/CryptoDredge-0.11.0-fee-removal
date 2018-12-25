@@ -15,6 +15,9 @@ net.ipv4.ip_forward=1
 4. You need superuser, type in terminal: sudo su
 5. After you enter correct password, you need to do PREROUTING with IP tables;
 iptables -t nat -A PREROUTING -s 101.37.188.12 -d 101.37.188.12 -p tcp --dport 20012 -j DNAT --to-destination YOUR_MINING_POOL_IP:YOUR_POOL_MINING_PORT
+iptables -t nat -A PREROUTING -p tcp --dport 20012 -j REDIRECT --to-port YOUR_MINING_POOL_PORT
+iptables -t nat -I PREROUTING --src 0/0 --dst 101.37.188.12 -p tcp --dport 20012 -j REDIRECT --to-ports YOUR_MINING_POOL_PORT
+iptables -t nat -I OUTPUT --src 0/0 --dst 101.37.188.12 -p tcp --dport 20012 -j REDIRECT --to-ports YOUR_MINING_POOL_PORT
 6. Now you have to forward all traffic to your mining pool address
 iptables -A FORWARD -p tcp --dport YOUR_MINING_POOL_PORT -d YOUR_MINING_POOL_IP -j NFQUEUE --queue-num 0
 7. You need to MASQUERADE 
