@@ -8,8 +8,7 @@ find below instructions as example;
 
 1. Stop your mining operations if any
 
-2. Install libs for python 2.7: scapy and nfqueue ( pip install scapy and pip install nfqueue ) - google it if you do not have knowladge
-
+2. Install libs for python 2.7: scapy and nfqueue; sudo apt-get install python-nfqueue python-scapy
 3. Change the python script per following instructions inside it. 
 
 4. PREROUTE TCP TRAFFIC TO YOUR MINING POOL. Detail instructions in file Port-Pool-Forwarding.ReadMe
